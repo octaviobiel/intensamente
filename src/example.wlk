@@ -16,6 +16,10 @@ object riley{
 	method pensamientosCentrales(){
 		return pensamientosCentrales
 	}
+	
+	method pensamientosCentralesDificilesDeExplicar(){
+		return pensamientosCentrales.filter({pensamiento => pensamiento.length()>10})
+	}
 }
 
 object alegria{
@@ -63,9 +67,6 @@ class Evento{
 	}
 	
 	method emocion() = emocion
-	method dificilDeExplicar(){
-		return descripcion.length() > 10
-	}
 	method asentar(_persona){
 		emocion.asentar(_persona, self)
 	}
